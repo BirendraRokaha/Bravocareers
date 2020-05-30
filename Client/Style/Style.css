@@ -1,7 +1,7 @@
 *{
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body{
@@ -22,9 +22,179 @@ ul{
 }
 
 .container{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    background-image: linear-gradient(rgb(236, 243, 238), rgb(235, 235, 235));
+    max-width: 1300px;
     width: 90%;
+    margin: auto;
 }
 
+/* Top nav */
+
+.top-nav{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;/*same as typing 4 times*/
+    
+    grid-gap: 5px;
+    height: 100px;
+    padding: 20px 0;
+    font-size: 13px;
+}
+    
+.top-nav h1{
+    font-size: 45px;
+    letter-spacing: 5px;
+    margin-left: 15%;    
+    justify-self: start;
+    transition: transform 100ms ease-in;
+}
+
+.top-nav h1:hover{
+    transform: scale(1.1); 
+}
+
+.right-btns{
+    margin-right: 10%;
+}
+
+.right-btns ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.right-btns button{
+    border: 1px solid rgb(113, 206, 144);
+    border-radius: 25px;
+	background-color: rgb(113, 206, 144);
+	color: #FFFFFF;
+	font-size: 12px;
+	padding: 15px 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 100ms ease-in;
+}
+
+.right-btns button:focus {
+    outline: none; 
+}
+
+.right-btns button:active {
+    transform: scale(0.80);
+}
+
+.right-btns button:hover{
+    background-color: rgb(91, 179, 116);
+}
+
+.main-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50px;
+    padding: 20px 0;
+    font-size: 13px;
+}
+
+.main-nav ul{  
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.main-nav ul li{
+    font-size: 18px; 
+    flex:1;
+    margin: 20px;
+}
+
+.main-nav ul li a:hover {
+    border-bottom: 2px solid #000;
+}
+
+/*showcase*/
+
+.btn{  
+    background: #2e2c2c;
+    border: 0;
+    font-size: 18px;
+    color: bisque;
+    padding: 10px 20px; 
+}
+
+.showcase{
+    background: url(../img/facebook_cover_photo_1.png) no-repeat center center/cover;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    margin-bottom: 20px;
+}
+
+/*top-cards*/
+.top-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;/*same as typing 4 times*/
+    grid-gap: 20px;
+    margin-bottom: 30px;
+
+}
+
+.top-cards img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.top-cards a{
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.top-cards a:hover{
+    font-weight: bold;
+}
+.drive{
+    background: url(../img/build_1.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    color: rgb(22, 9, 29);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    margin-bottom: 20px;
+}
+
+.dirve h1 , .drive p {
+    width: 40%;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 20px;
+}
+
+.social p{
+    font-weight: bold;
+    border-bottom: rgb(24, 28, 51) solid 2px;
+}
+  
+.social * {
+    margin-right: 10px;
+}
+
+footer{
+    text-align: center;
+    padding-bottom: 30px;
+}
